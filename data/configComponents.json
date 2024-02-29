@@ -1,0 +1,21 @@
+[{
+    "preloader": {
+        "show": true
+    },
+    "banner": {
+        "show": false
+    },
+    "modal": {
+        "show": false,
+        "delay": 3000,
+        "repeat": true,
+        "repeatFrequency": 28
+    },
+    "popup": {
+        "show": true,
+        "position": "right",
+        "delay": 3000,
+        "repeat": true,
+        "repeatFrequency": 28
+    }
+}]

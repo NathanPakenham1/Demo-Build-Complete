@@ -1,0 +1,13 @@
+.colony_banner {
+    position: relative;
+    display: block;
+    padding: 3px var(--container-padding);
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    font-size: 0.85rem;
+}
+.colony_banner:hover {
+    color: var(--white);
+    text-decoration: underline;
+}

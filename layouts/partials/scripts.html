@@ -1,0 +1,85 @@
+{{ range .Site.Data.configComponents }}
+
+{{ if eq .modal.show true }}
+<!-- promo modal -->
+<script src="/assets/js/components/modal_promo.js"></script>
+{{ end }}
+
+{{ if eq .popup.show true }}
+<!-- promo popup -->
+<script src="/assets/js/components/popup_promo.js"></script>
+{{ end }}
+
+{{ end }}
+
+{{ range .Site.Data.configScripts }}
+
+{{ if eq .cloudflare true }}
+<!-- cloudflare SDK -->
+<script src="https://embed.cloudflarestream.com/embed/sdk.latest.js"></script>
+{{ end }}
+
+{{ if eq .fontAwesome true }}
+<!-- font awesome -->
+<script src="https://kit.fontawesome.com/f09f7643cf.js" crossorigin="anonymous"></script>
+{{ end }}
+
+{{ if eq .jqueryUI true }}
+<!-- jquery date picker -->
+<link rel="stylesheet" href="/assets/css/third-party/date-picker.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+{{ end }}
+
+{{ if eq .jsCookie true }}
+<!--jquery cookie -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.mjs"></script>
+{{ end }}
+
+{{ if eq .netlifyIdentity true }}
+<!-- add Netlify identity -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{{ end }}
+
+{{ if eq .schemaDotOrg true }}
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "Business Name",
+      "url": "https://websitename.com/",
+      "sameAs": [
+        "https://site1.com",
+        "https://site2.com",
+        "https://site3.com"
+      ]
+    }
+  </script>
+{{ end }}
+
+{{ if eq .slick true }}
+<!-- slick -->
+<link rel="stylesheet" type="text/css" href="/assets/css/third-party/slick.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/third-party/slick-theme.css" />
+<script type="text/javascript" src="/assets/js/third-party/slick.min.js"></script>
+<script type="text/javascript" src="/assets/js/third-party/slick-config.js"></script>
+{{ end }}
+
+{{ if eq .visible true }}
+<!-- visible -->
+<script src="/assets/js/third-party/visible.js"></script>
+{{ end }}
+
+<!-- components js -->
+<script src="/assets/js/components/dropdowns.js"></script>
+<script src="/assets/js/components/forms.js"></script>
+<script src="/assets/js/components/menus.js"></script>
+<script src="/assets/js/components/modals.js"></script>
+<script src="/assets/js/components/preloaders.js"></script>
+
+<!-- snippets -->
+<script src="/assets/js/snippets/nav_padding_set_height.js"></script>
+<script src="/assets/js/snippets/nav_add_class_scroll.js"></script>
+<script src="/assets/js/components/team_carousel_1.js"></script>
+
+{{ end }}

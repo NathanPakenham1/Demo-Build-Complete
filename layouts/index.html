@@ -1,0 +1,119 @@
+{{ define "main" }}
+
+<section class="hero">
+    <div class="colony_tile colony_video_tile">
+        <video autoplay playsinline loop muted class="video-background">
+            <source src="/assets/videos/trees.mp4" type="video/mp4">
+        </video>
+        <div class="colony_overlay">
+            <div class="content center content-med">
+                <h1>Website Hero</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <a href="#contact" class="btn-1">CTA button</a>
+            </div>
+        </div>
+
+        <img src="/assets/img/transition-1.svg" class="transition desktop w100a">
+        <img src="/assets/img/transition-mobile.svg" class="transition mobile w100a">
+    </div>
+</section>
+
+<div class="colony_scroll_anchor" id="about"></div>
+<section class="about pt-med pb-lrg">
+    <div class="container">
+        <div class="colony_feature colony_feature_1 feature_left">
+            <div class="grid-2">
+                <div class="grid-item feature">
+                    <img src="/assets/img/feature-1.jpg" alt="" class="w100">
+                </div>
+                <div class="grid-item content">
+                    <h2 class="txt-1">Short section title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+        <div class="colony_feature colony_feature_1 feature_right mt-xlrg">
+            <div class="grid-2">
+                <div class="grid-item content">
+                    <h2 class="txt-1">Short section title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="grid-item feature">
+                    <img src="/assets/img/feature-2.jpg" alt="" class="w100">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="colony_scroll_anchor" id="destinations"></div>
+<section class="destinations bg-1 py-lrg">
+    <div class="container">
+        <div class="colony_carousel colony_team_carousel_1">
+            <div class="carousel_header">
+                <div class="content">
+                    <div class="title txt-2">Another section title goes here</div>
+                    <div class="subtitle txt-3">
+                        <p class="mb-0 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="prev colony_team_carousel_1_prev txt-2">
+                        <i class="fa-light fa-chevron-left" aria-hidden="true"></i>
+                    </div>
+                    <div class="next colony_team_carousel_1_next txt-2">
+                        <i class="fa-light fa-chevron-right" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colony_team_carousel_1_slides slides">
+                {{ range .Site.Data.destinations }}
+                <div class="slide">
+                    <span class="colony_tag">{{ .category }}</span>
+                    <img src="{{ .img }}" alt="" class="w100">
+                    <div class="content">
+                        <div class="title">{{ .title }}</div>
+                        <div class="subtitle">{{ .subtitle }}</div>
+                        <div class="summary">{{ .summary }}</div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="banner">
+    <div class="colony_tile"></div>
+</section>
+
+<div class="colony_scroll_anchor" id="contact"></div>
+<div class="contact pb-lrg">
+    <div class="container">
+        <div class="content-med center">
+            <h3 class="txt-3">Get in Touch</h3>
+            <form class="colony_form" id="formId" name="Form Name" data-netlify="true" autocomplete="on"
+                onkeydown="return event.key != 'Enter';">
+                <input id="frm-contact-name" name="Name" type="text" placeholder="Name" aria-label="" class="w100">
+                <input id="frm-contact-email" name="Email" type="email" placeholder="Email" aria-label="" class="w100">
+                <div>
+                    <textarea id="frm-contact-msg" name="Message" placeholder="Message" aria-label="" rows="4"
+                        class="w100"></textarea>
+                </div>
+                <button class="btn-1 mt-sml" type="submit">Submit</button>
+                <div class="colony_form_success" style="display: none;">Thank you for your message</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{{ end }}

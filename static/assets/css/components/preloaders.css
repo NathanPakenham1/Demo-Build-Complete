@@ -1,0 +1,28 @@
+.colony_preloader {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: var(--white);
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.colony_preloader img{
+    height: 75px;
+    width: auto;
+    animation: loader 2s linear infinite;
+}
+@keyframes loader {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

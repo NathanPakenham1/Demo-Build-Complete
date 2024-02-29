@@ -1,0 +1,21 @@
+[{
+    "show": true,
+    "img": "https://via.placeholder.com/800x600",
+    "title": "Person Name",
+    "subtitle": "Job Title",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+},
+{
+    "show": true,
+    "img": "https://via.placeholder.com/800x600",
+    "title": "Person Name",
+    "subtitle": "Job Title",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+},
+{
+    "show": true,
+    "img": "https://via.placeholder.com/800x600",
+    "title": "Person Name",
+    "subtitle": "Job Title",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+}]

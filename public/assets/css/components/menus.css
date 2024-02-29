@@ -1,0 +1,90 @@
+/* menus ---------------------------------------- */
+.colony_menu_wrp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    z-index: 99;
+    display: none;
+    background: var(--grey-faded);
+}
+.colony_menu {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    max-width: 0;
+    width: 50%;
+	background: var(--grey);
+	color: var(--black);
+	transition: 0.3s;
+    z-index: 100;
+	overflow-x: hidden;
+}
+.colony_menu.open {
+    max-width: 1000px;
+}
+.colony_menu.menu_left {
+    left: 0;
+}
+.colony_menu.menu_right {
+	right: 0;
+}
+.colony_menu .content {
+	display: none;
+	height: 100%;
+}
+.menu_close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 2.25rem;
+	cursor: pointer;
+}
+.colony_menu .links_wrp {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: left;
+	padding-top: var(--space-lrg);
+	padding-left: var(--space-med);
+}
+.colony_menu .links {
+    width: 100%;
+}
+.colony_menu .links a {
+	display: block;
+	margin-bottom: var(--space-sml);
+  	user-select: none;
+    text-decoration: none;
+}
+.colony_menu ul,
+.colony_menu li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+} 
+
+/* responsive ---------------------------------------- */
+@media only screen and (max-width: 800px) {
+    .colony_menu.open {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 501px) {
+    .colony_menu.open {
+        width: 100%;
+    }
+    .menu_close {
+        top: 10px;
+        right: 15px;
+    }
+    .colony_menu .links_wrp {
+        padding-top: var(--space-xlrg);
+        padding-left: var(--space-med);
+        flex-direction: column;
+    }
+}

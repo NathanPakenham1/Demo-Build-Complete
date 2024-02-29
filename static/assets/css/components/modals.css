@@ -1,0 +1,48 @@
+/* modals ---------------------------------------- */
+.colony_modal {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--container-padding);
+    background: rgba(0,0,0,0.85);
+}
+.colony_modal .close {
+    cursor: pointer;
+    position: absolute;
+    top: var(--space-sml);
+    right: var(--space-sml);
+    font-size: 1.5rem;
+    color: var(--white);
+}
+.colony_modal .background {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.colony_modal .content {
+    max-width: min(90%, calc(var(--container-width) - var(--container-padding) * 2));
+    max-height: 90vh;
+    position: relative;
+    z-index: 1001;
+    overflow-y: auto;
+    text-align: center;
+    padding: var(--space-sml);
+    background: var(--white);
+    color: var(--black);
+}
+.colony_modal .img_dynamic {
+    width: 1000px;  
+    height: auto;
+}
+.colony_modal .video_dynamic {
+    width: 1000px;  
+}

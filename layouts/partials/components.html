@@ -1,0 +1,52 @@
+<!-- preloader -->
+{{ range .Site.Data.configComponents }}
+{{ if eq .preloader.show true }}
+<div class="colony_preloader">
+    <img src="/assets/img/logo.png" alt="">
+</div>
+{{ end }}
+{{ end }}
+
+<!-- banner -->
+
+<!-- modal -->
+{{ if .IsHome }}
+{{ range .Site.Data.configComponents }}
+{{ if eq .modal.show true }}
+<div class="colony_modal colony_modal_promo" style="display: none;" data-delay="{{ .modal.delay }}"
+    data-repeat="{{ .modal.repeat }}" data-repeatFrequency="{{ .modal.repeatFrequency }}">
+    <div class="background"></div>
+    <div class="close">
+        <i class="fa-light fa-xmark"></i>
+    </div>
+    <div class="content">
+        Modal content goes here
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}
+
+<!-- popup -->
+{{ if .IsHome }}
+{{ range .Site.Data.configComponents }}
+{{ if eq .popup.show true }}
+{{ if eq .popup.position "right" }}
+<div class="colony_popup colony_popup_promo colony_popup_1 align_right" style="display: none;"
+    data-delay="{{ .popup.delay }}" data-repeat="{{ .popup.repeat }}"
+    data-repeatFrequency="{{ .popup.repeatFrequency }}">
+    {{ else if eq .popup.position "left" }}
+    <div class="colony_popup colony_popup_promo align_left" style="display: none;" data-delay="{{ .popup.delay }}"
+        data-repeat="{{ .popup.repeat }}" data-repeatFrequency="{{ .popup.repeatFrequency }}">
+        {{ end }}
+        <div class="colony_popup_close">
+            <i class="fa-light fa-xmark"></i>
+        </div>
+        <a href="#" class="content">
+            <div class="title">Pop Up Title Goes Here</div>
+            <div class="message">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</div>
+        </a>
+    </div>
+    {{ end }}
+    {{ end }}
+    {{ end }}

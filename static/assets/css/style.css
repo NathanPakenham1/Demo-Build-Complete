@@ -1,0 +1,265 @@
+@import "components/banners.css";
+@import "components/buttons.css";
+@import "components/dropdowns.css";
+@import "components/fades.css";
+@import "components/features.css";
+@import "components/footer_1.css";
+@import "components/menus.css";
+@import "components/modals.css";
+@import "components/nav_bars.css";
+@import "components/overlays.css";
+@import "components/popups.css";
+@import "components/preloaders.css";
+@import "components/scroll_anchors.css";
+@import "components/text_groups.css";
+@import "components/tags.css";
+@import "components/team_carousel_1.css";
+@import "components/tiles.css";
+
+/* custom ---------------------- */
+
+.mobile{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+}
+
+/* preloader ---------------------- */
+
+.colony_preloader {
+    background: var(--plum);
+    color: var(--offWhite);
+}
+
+/* popup ---------------------- */
+
+.colony_popup{
+    background: var(--orange);
+}
+
+.colony_popup a{
+    color: var(--black);
+}
+
+/* header ---------------------- */
+
+.colony_nav{
+    background: none;
+    transition: 0.3s;
+}
+
+.colony_nav.scrolled{
+    background: var(--darkGreen);
+}
+
+.colony_nav .links a{
+    color: var(--white);
+}
+
+.colony_nav .menu_open{
+    color: var(--white);
+}
+
+.fixeds{
+    width: 100%;
+    z-index: 999;
+    position: fixed; 
+}
+
+/* mobile menu ------------------ */
+
+.colony_menu{
+    z-index: 999;
+    background-color: var(--darkGreen);
+}
+
+.colony_menu .links a {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.colony_menu .menu_close {
+    color: var(--white);
+}
+
+/* footer --------------------- */
+
+
+.colony_footer {
+    background: var(--darkGreen);
+    color: var(--offWhite);
+}
+
+.compliance {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.compliance li{
+    list-style: none;
+}
+
+.compliance a{
+    text-decoration: none;
+}
+
+/* hero ---------------------- */
+
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.hero .colony_tile {
+    height: 100%;
+    width: 100%;
+}
+
+.hero .colony_overlay{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .transition{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+@media only screen and (max-width: 600px){
+    .hero .btn-1{
+        width: 100%;
+    }
+}
+
+/* about ------------------- */
+
+.about .colony_feature img{
+    border-radius: 30px;
+}
+
+.about .colony_feature .grid-2{
+    column-gap: var(--space-lrg);
+}
+
+/* destinations --------------- */
+
+.destinations{
+    overflow: hidden;
+}
+
+.destinations .colony_team_carousel_1 .carousel_header .title{
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.destinations .colony_team_carousel_1_slides{
+    margin-top: var(--space-lrg);
+}
+
+.destinations .colony_team_carousel_1_slides .slide{
+    position: relative;
+}
+
+
+
+.destinations .colony_team_carousel_1_slides .colony_tag{
+    position: absolute;
+    top: var(--space-xsml);
+    left: var(--space-xsml);
+    background: var(--plum);
+    color: var(--offWhite);
+    font-size: 0.85rem;
+}
+
+.destinations .colony_team_carousel_1_slides img{
+    border-radius: 10px;
+    border-right: 10px solid var(--orange);
+}
+
+.destinations .colony_team_carousel_1_slides .title{
+    font-size: 1.75rem;
+    color: var(--offWhite);
+}
+
+.destinations .colony_team_carousel_1_slides .subtitle{
+    color: var(--orange);
+}
+
+.destinations .colony_team_carousel_1_slides .summary{
+    font-size: 0.9rem;
+    color: var(--offWhite);
+}
+
+.slick-dots li button::before{
+    color: white !important;
+}
+
+/* banner ---------------------- */
+
+.banner .colony_tile{
+    width: 100%;
+    padding-top: 30%;
+    background: url(/assets/img/banner.jpg) no-repeat 50% 70%;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 1100px) {
+    .banner .colony_tile{
+        padding-top: 56%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .banner .colony_tile{
+        padding-top: 72%;
+    }
+}
+
+
+
+/* contact ---------------------- */
+
+.contact{
+    position: relative;
+    margin-bottom: -170px;
+}
+
+.contact .content-med{
+    position: relative;
+    top: -100px;
+    border-radius: 20px;
+    padding: var(--space-med);
+    background: var(--plum); 
+}
+
+.contact input,
+.contact textarea{
+    border-bottom: 1px solid var(--offWhite);
+}
+
+@media only screen and (max-width: 800px){
+    .contact{
+        margin-bottom: -50px;
+    }
+    .contact .content-med{
+        padding: var(--space-sml);
+        top: -50px;
+    }
+}
+
+@media only screen and (maxx-width: 600px){
+    .contact .content-med .btn-1{
+        width: 100%;
+    }
+}

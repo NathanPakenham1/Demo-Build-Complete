@@ -1,0 +1,14 @@
+.colony_tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+}
+.colony_tag {
+    font-size: 0.9em;
+    padding: 2px 10px;
+    background: var(--grey);
+    display: inline-block;
+    border-radius: 5px;
+}

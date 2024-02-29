@@ -1,0 +1,37 @@
+/* overlays ---------------------------------------- */
+.colony_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-sml);
+    color: white;
+    transition: 0.5s;
+    z-index: 1;
+}
+.colony_overlay.show-hover {
+    opacity: 0;
+}
+.colony_overlay.show-hover:hover {
+    opacity: 1;
+}
+.colony_overlay.hide-hover {
+    opacity: 1;
+}
+.colony_overlay.hide-hover:hover {
+    opacity: 0;
+}
+
+/* responsive ---------------------------------------- */
+@media only screen and (max-width: 1100px) {
+    .colony_overlay.show-hover:hover {
+        opacity: 0;
+    }
+    .colony_overlay.hide-hover:hover {
+        opacity: 1;
+    }
+}

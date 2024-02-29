@@ -1,0 +1,38 @@
+<header class="colony_nav colony_nav_1 fixeds">
+    {{ range .Site.Data.configComponents }}
+    {{ if eq .banner.show true }}
+    <a href="#" class="colony_banner">Banner Message Goes Here</a>
+    {{ end }}
+    {{ end }}
+    <div class="nav_inner ">
+        <a href="/" class="logo">
+            <img src="/assets/img/logo.png" alt="" class="w100">
+        </a>
+        <ul class="links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu_open hide">
+            <i class="fa-thin fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<div class="nav_padding"></div>
+
+<div class="colony_menu_wrp"></div>
+<div class="colony_menu menu_left">
+    <div class="content">
+        <div class="menu_close">
+            <i class="fa-thin fa-xmark"></i>
+        </div>
+        <div class="links_wrp">
+            <ul class="links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

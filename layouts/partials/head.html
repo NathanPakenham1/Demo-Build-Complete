@@ -1,0 +1,85 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>{{.Title}}</title>
+<meta content="" name="keywords">
+<meta name="theme-color" content="whitesmoke">
+{{ if eq .Page.Params.robots false }}
+<meta name="robots" content="noindex, nofollow">
+{{ end }}
+<link rel="icon" type="image/png" href="/assets/img/favicon.png"/>
+
+<!-- description -->
+{{ if .IsHome }}
+<meta name="description" content="Add Homepage description here">
+{{ else }}
+<meta name="description" content="{{ .Page.Description }}">
+{{ end }}
+
+<!-- canonical -->
+{{ if ne .Page.Params.canonical nil }}
+<link rel="canonical" href="{{ .Page.Params.canonical }}">
+{{ else }}
+<link rel="canonical" href="{{ .Permalink }}">
+{{ end }}
+
+<!-- google analytics -->
+
+<!-- userback tag -->
+
+<!-- social sharing -->
+{{ if ne .Page.Params.pagetype "shareable" }}
+<meta property="og:url" content="{{.Site.BaseURL}}" />
+<meta property="og:site_name" content="{{.Title}}">
+<meta property="og:title" content="{{.Title}}" />
+<meta property="og:type" content="website" />
+{{ if .IsHome }}
+<meta property="og:description" content= "Homepage Description" />
+{{ else }}
+<meta property="og:description" content= "{{ .Page.Description }}" />
+{{ end }}
+<meta property="og:image" itemprop="image" content="{{.Site.BaseURL}}/assets/img/social-image.jpg">
+<meta property="og:image:secure_url" itemprop="image" content="{{.Site.BaseURL}}/assets/img/social-image.jpg" />
+<meta property="og:image:alt" content="Add your alternative text here" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://example.com/image.jpg">
+<!--<meta name="twitter:site" content="@nytimes">
+<meta name="twitter:creator" content="@SarahMaslinNir">-->
+{{ else if eq .Page.Params.pagetype "shareable" }}
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{.Title}}">
+<meta property="og:title" content="{{.Title}}" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content= "{{ .Page.Description }}" />
+<meta property="og:image" content="{{.Site.BaseURL}}{{ .Page.Params.headerImg }}">
+<meta property="og:image:secure_url" itemprop="image" content="{{.Site.BaseURL}}{{ .Page.Params.headerImg }}" />
+<meta name="twitter:card" content="{{.Site.BaseURL}}/assets/img/thumbnail.jpg">
+<!--<meta name="twitter:site" content="@nytimes">
+<meta name="twitter:creator" content="@SarahMaslinNir">-->
+{{ end }}
+
+<!-- js -->
+<script src='/assets/js/third-party/jquery-2.2.4.min.js'></script>
+<script src="/assets/js/main.js"></script>	
+
+<!-- css -->
+<link rel="stylesheet" href="/assets/css/colony-structure.css">
+<link rel="stylesheet" href="/assets/css/colony-style.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<!-- priority scripts -->
+{{ range .Site.Data.configScripts }}
+
+  {{ if eq .ajaxChimp true }}
+  <!-- ajax chimp -->
+  <script src="/assets/js/third-party/ajax-chimp.js"></script>
+  <script src="/assets/js/components/mailchimp.js"></script>
+  {{ end }}
+
+  {{ if eq .swiper true }}
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  {{ end }}
+
+{{ end }}

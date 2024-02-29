@@ -1,0 +1,12 @@
+[{
+    "ajaxChimp": false,
+    "cloudflare": false,
+    "fontAwesome": true,
+    "jqueryUI": false,
+    "jsCookie": false,
+    "netlifyIdentity": false,
+    "schemaDotOrg": false,
+    "slick": true,
+    "swiper": true,
+    "visible": false
+}]

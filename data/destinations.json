@@ -1,0 +1,40 @@
+[{
+    "show": true,
+    "img": "/assets/img/destinations.jpg",
+    "category": "Category",
+    "title": "Destination 1",
+    "subtitle": "Subtitle",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+},
+{
+    "show": true,
+    "img": "/assets/img/destinations.jpg",
+    "category": "Category",
+    "title": "Destination 2",
+    "subtitle": "Subtitle",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+},
+{
+    "show": true,
+    "img": "/assets/img/destinations.jpg",
+    "category": "Category",
+    "title": "Destination 3",
+    "subtitle": "Subtitle",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+},
+{
+    "show": true,
+    "img": "/assets/img/destinations.jpg",
+    "category": "Category",
+    "title": "Destination 4",
+    "subtitle": "Subtitle",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+},
+{
+    "show": true,
+    "img": "/assets/img/destinations.jpg",
+    "category": "Category",
+    "title": "Destination 5",
+    "subtitle": "Subtitle",
+    "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+}]

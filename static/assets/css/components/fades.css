@@ -1,0 +1,33 @@
+/*fades------------------------------*/
+.colony_fade {
+    position: absolute;
+    z-index: 1;
+}
+.colony_fade.top {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.colony_fade.bottom {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 200px;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.colony_fade.left {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 200px;
+    background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.colony_fade.right {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    width: 200px;
+    background: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+}

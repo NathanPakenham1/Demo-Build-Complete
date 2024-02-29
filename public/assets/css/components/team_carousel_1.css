@@ -1,0 +1,76 @@
+/* header */
+.colony_team_carousel_1 .carousel_header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.colony_team_carousel_1 .carousel_header .content {
+    max-width: var(--content-med-width);
+}
+.colony_team_carousel_1 .carousel_header .title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2em;
+}
+.colony_team_carousel_1 .carousel_header .subtitle {
+    margin-top: var(--space-sml);
+}
+
+/* controls */
+.colony_team_carousel_1 .controls {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.colony_team_carousel_1 .controls .prev, 
+.colony_team_carousel_1 .controls .next {
+    padding: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* carousel */
+.colony_team_carousel_1_slides {
+    margin-top: var(--space-med);
+}
+.colony_team_carousel_1 .slides.slick-dotted.slick-slider {
+    display: block;
+    padding-bottom: var(--space-med);
+}
+.colony_team_carousel_1 .slick-list {
+    padding-right: 10%;
+}
+
+/* slides */
+.colony_team_carousel_1 .slide {
+    margin-right: var(--space-med);
+}
+.colony_team_carousel_1 .slide .content {
+    margin-top: var(--space-xsml);
+}
+.colony_team_carousel_1 .slide .title {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.colony_team_carousel_1 .slide .subtitle {
+    margin-top: 5px;
+}
+.colony_team_carousel_1 .slide .summary {
+    margin-top: var(--space-xsml);
+    font-size: 0.9rem;
+}
+
+/* responsive */
+@media only screen and (max-width: 900px) {
+    .colony_team_carousel_1 .carousel_header .content {
+        max-width: 75%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .colony_team_carousel_1 .carousel_header .content {
+        max-width: 90%;
+    }
+    .colony_team_carousel_1 .carousel_header .controls {
+        display: none;
+    }
+}

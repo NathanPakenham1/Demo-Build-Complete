@@ -1,0 +1,54 @@
+.colony_popup {
+    max-width: var(--content-sml-width);
+    position: fixed;
+    bottom: var(--space-xsml);
+    background: var(--grey);
+    border: 1px solid var(--black);
+    padding: var(--space-sml);
+    z-index: 100;
+}
+.colony_popup.align_right {
+    right: var(--space-xsml);
+}
+.colony_popup.align_left {
+    left: var(--space-xsml);
+}
+.colony_popup_close {
+    position: absolute;
+    top: calc(var(--space-sml) - 10px);
+    right: calc(var(--space-sml) - 10px);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.colony_popup .content {
+    padding-right: 30px;
+    display: block;
+}
+.colony_popup a.content {
+    text-decoration: none;
+}
+.colony_popup .grid-2 {
+    grid-template-columns: 90px 1fr;
+}
+.colony_popup .title {
+    font-weight: 600;
+}
+.colony_popup .message {
+    margin-top: var(--space-xsml);
+    font-size: 0.9rem;
+}
+@media only screen and (max-width: 600px) {
+    .colony_popup.align_left,
+    .colony_popup.align_right {
+        max-width: calc(100% - 20px);
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+    .colony_popup .grid-2 {
+        grid-template-columns: 75px 1fr;
+    }
+}
